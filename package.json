@@ -1,0 +1,15 @@
+{
+  "name": "reddit",
+  "version": "1.0.0",
+  "description": "A (better) implementation of the well known site Reddit.com",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/FreddieShoreditch/rails_reddit.git"
+  },
+  "author": "Freddie Lindsey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FreddieShoreditch/rails_reddit/issues"
+  },
+  "homepage": "https://github.com/FreddieShoreditch/rails_reddit#readme"
+}

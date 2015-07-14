@@ -1,0 +1,10 @@
+<%= react_component('PostTitle', {}) %>
+
+<% @posts.each do |post| %>
+  <%= react_component('PostListing', {
+      id: post.id,
+      title: post.title,
+      content: post.content,
+      username: post.user.username
+    }) %>
+<% end %>

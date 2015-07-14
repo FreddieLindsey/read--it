@@ -1,0 +1,30 @@
+@import "bootstrap-sprockets"
+@import "bootstrap"
+@import url(http://fonts.googleapis.com/css?family=Roboto)
+
+$light-level: 80
+$dark-level: 34
+$main-colour: rgb($light-level, $light-level, $light-level)
+$main-text: rgb(200, 200, 200)
+$second-colour: rgb($dark-level, $dark-level, $dark-level)
+
+html, body
+	font-family: 'Roboto', sans-serif
+	background: $main-colour
+	color: $main-text
+	margin: 0
+	padding: 0
+	height: 100%
+
+#navbar, #footer
+	background: $second-colour
+
+ul.dropdown-menu, li.dropdown
+	background: $second-colour
+
+	li a
+		color: $main-text
+
+	li a:hover
+		background: $second-colour
+		color: $main-text

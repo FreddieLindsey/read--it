@@ -1,0 +1,16 @@
+<%= react_component('PostSummary', {
+    id: @post.id,
+    title: @post.title,
+    content: @post.content,
+    username: @post.user.username,
+  }) %>
+
+<hr>
+
+<% @comments.each do |comment| %>
+  <%= react_component('Comment', {
+      content: comment.content,
+      username: comment.user.username,
+      created: comment.created_at
+    }) %>
+<% end %>
