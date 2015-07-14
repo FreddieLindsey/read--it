@@ -56,3 +56,6 @@ gem 'devise'
 gem 'bootstrap-sass', '~> 3.3.5'
 # An autoprefixer for vendor prefixes
 gem 'autoprefixer-rails'
+# Use rails_12factor for Heroku integration
+gem 'rails_12factor', group: :production
+gem 'rails_12factor', group: :production
