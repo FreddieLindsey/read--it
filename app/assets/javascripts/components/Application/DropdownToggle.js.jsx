@@ -5,12 +5,14 @@ var DropdownToggle = React.createClass({
     if (this.props.dropdown != null) {
       return (this.props.dropdown.map(function (link) {
         if (link.divider) {
-          return (<li role="separator" className="divider"></li>)
+          return (<li key={link.divider} role="separator" className="divider"></li>)
         } else {
-          return (<li><a href={link.url}>{link.title}</a></li>)
+          return (<li key={link.title}><a href={link.url}>{link.title}</a></li>)
         }
       }));
-    } else { return (<div></div>); }
+    } else {
+      return (<div key={null}></div>);
+    }
   },
 
   render: function() {

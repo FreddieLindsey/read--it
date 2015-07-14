@@ -14,6 +14,9 @@ Rails.application.routes.draw do
     passwords: 'user/passwords'
   }
 
+  # User controller (all not devise handled)
+  get 'users/posts', to: 'user#posts'
+
   # SubReddit controller
   get '/r/:title', to: 'sub_reddit#show'
   post '/r/:title', to: 'sub_reddit#new'

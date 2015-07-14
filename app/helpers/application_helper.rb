@@ -10,7 +10,7 @@ module ApplicationHelper
       @links << {
         title: current_user.username,
         dropdown: [
-          { url: '', title: 'View Posts'},
+          { url: '/users/posts', title: 'View Posts'},
           { divider: true },
           { url: edit_user_registration_path, title: 'Edit' },
           { url: destroy_user_session_path, title: 'Logout'}

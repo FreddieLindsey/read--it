@@ -4,6 +4,7 @@ var PostSummary = React.createClass({
   getInitialState: function () {
     return {
       id: this.props.id,
+      url: this.props.url,
       title: this.props.title,
       content: this.props.content,
       username: this.props.username

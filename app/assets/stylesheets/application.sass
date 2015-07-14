@@ -9,22 +9,28 @@ $main-text: rgb(200, 200, 200)
 $second-colour: rgb($dark-level, $dark-level, $dark-level)
 
 html, body
-	font-family: 'Roboto', sans-serif
-	background: $main-colour
-	color: $main-text
-	margin: 0
-	padding: 0
-	height: 100%
+  font-family: 'Roboto', sans-serif
+  background: $main-colour
+  color: $main-text
+  margin: 0
+  padding: 0
+  height: 100%
 
-#navbar, #footer
-	background: $second-colour
+#navbar
+  background: $second-colour
 
 ul.dropdown-menu, li.dropdown
-	background: $second-colour
+  background: $second-colour
 
-	li a
-		color: $main-text
+  li a
+    color: $main-text
 
-	li a:hover
-		background: $second-colour
-		color: $main-text
+  li a:hover
+    background: $second-colour
+    color: $main-text
+
+.post-listing-title
+
+  a, a:hover, a:visited, a:link, a:active
+    text-decoration: underline
+    color: $main-text

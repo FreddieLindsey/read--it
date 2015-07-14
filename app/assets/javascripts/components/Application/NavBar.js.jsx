@@ -13,7 +13,7 @@ var NavBar = React.createClass({
     if (this.state.links != null) {
       return (this.state.links.map(function (link) {
         if (link.dropdown) {
-          return (<li><DropdownToggle title={link.title} dropdown={link.dropdown}/></li>)
+          return (<li key={link.title}><DropdownToggle title={link.title} dropdown={link.dropdown}/></li>)
         } else if (link.url) {
           return (<li key={link.title}><a href={link.url}>{link.title}</a></li>)
         }
