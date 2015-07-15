@@ -11,5 +11,13 @@
   "bugs": {
     "url": "https://github.com/FreddieShoreditch/rails_reddit/issues"
   },
-  "homepage": "https://github.com/FreddieShoreditch/rails_reddit#readme"
+  "homepage": "https://github.com/FreddieShoreditch/rails_reddit#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-sass": "^2.0.3",
+    "gulp-sourcemaps": "^1.5.2"
+  },
+  "dependencies": {
+    "bower": "^1.4.1"
+  }
 }
