@@ -4,12 +4,11 @@
   <title>Reddit</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= favicon_link_tag %>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <script src="assets/bundle.js"></script>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
 <%= react_component('NavBar', {
     sitename: "Reddit",
     root_path: root_path,

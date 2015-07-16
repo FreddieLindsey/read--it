@@ -1,3 +1,5 @@
+var React = require('react');
+
 var DropdownToggle = React.createClass({
   displayName: 'DropdownToggle',
 
@@ -31,3 +33,5 @@ var DropdownToggle = React.createClass({
   }
 
 });
+
+module.exports = DropdownToggle;

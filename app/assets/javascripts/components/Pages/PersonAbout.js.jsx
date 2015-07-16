@@ -1,3 +1,5 @@
+var React = require('react');
+
 var PersonAbout = React.createClass({
   displayName: 'PersonAbout',
 
@@ -19,3 +21,5 @@ var PersonAbout = React.createClass({
     );
   }
 });
+
+module.exports = PersonAbout;
