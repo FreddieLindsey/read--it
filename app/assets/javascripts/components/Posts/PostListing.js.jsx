@@ -1,3 +1,5 @@
+var React = require('react');
+
 var PostListing = React.createClass({
   displayName: 'PostListing',
 
@@ -22,3 +24,5 @@ var PostListing = React.createClass({
     )
   }
 });
+
+module.exports = PostListing;

@@ -1,3 +1,5 @@
+var React = require('react');
+
 var NavBar = React.createClass({
   displayName: 'NavBar',
 
@@ -44,3 +46,5 @@ var NavBar = React.createClass({
     );
   }
 });
+
+module.exports = NavBar;

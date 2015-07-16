@@ -1,3 +1,5 @@
+var React = require('react');
+
 var PostTitle = React.createClass({
   displayName: 'PostTitle',
 
@@ -12,3 +14,5 @@ var PostTitle = React.createClass({
     );
   }
 });
+
+module.exports = PostTitle;

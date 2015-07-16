@@ -1,3 +1,5 @@
+var React = require('react');
+
 var PostSummary = React.createClass({
   displayName: 'PostSummary',
 
@@ -35,3 +37,5 @@ var PostSummary = React.createClass({
     );
   }
 });
+
+module.exports = PostSummary;
