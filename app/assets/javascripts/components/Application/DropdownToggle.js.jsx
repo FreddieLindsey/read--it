@@ -1,21 +1,21 @@
-var DropdownToggle = React.createClass({
-  displayName: 'DropdownToggle',
+import React from 'react';
 
-  getLinks: function () {
+class DropdownToggle extends React.component {
+  displayName: 'DropdownToggle'
+
+  getLinks() {
     if (this.props.dropdown != null) {
       return (this.props.dropdown.map(function (link) {
-        if (link.divider) {
-          return (<li key={link.divider} role="separator" className="divider"></li>)
-        } else {
-          return (<li key={link.title}><a href={link.url}>{link.title}</a></li>)
-        }
+        return (link.divider) ?
+          (<li key={link.divider} role="separator" className="divider"></li>) :
+          (<li key={link.title}><a href={link.url}>{link.title}</a></li>);
       }));
     } else {
       return (<div key={null}></div>);
     }
-  },
+  }
 
-  render: function() {
+  render() {
     return (
       <li className='dropdown'>
         <a href="#" className="dropdown-toggle"
@@ -30,4 +30,6 @@ var DropdownToggle = React.createClass({
     );
   }
 
-});
+};
+
+export default DropdownToggle;

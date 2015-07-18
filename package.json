@@ -1,15 +1,23 @@
 {
-  "name": "reddit",
+  "name": "read--it",
   "version": "1.0.0",
   "description": "A (better) implementation of the well known site Reddit.com",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/FreddieShoreditch/rails_reddit.git"
+    "url": "git+ssh://git@github.com/FreddieShoreditch/read--it.git"
   },
   "author": "Freddie Lindsey",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/FreddieShoreditch/rails_reddit/issues"
+    "url": "https://github.com/FreddieShoreditch/read--it/issues"
   },
-  "homepage": "https://github.com/FreddieShoreditch/rails_reddit#readme"
+  "homepage": "https://github.com/FreddieShoreditch/read--it#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^1.0.0-rc-1",
+    "eslint-loader": "^0.14.2",
+    "eslint-plugin-react": "^2.7.1",
+    "react": "^0.13.3",
+    "webpack": "^1.10.1"
+  }
 }

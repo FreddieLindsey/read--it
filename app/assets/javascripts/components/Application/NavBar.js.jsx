@@ -1,32 +1,37 @@
-var NavBar = React.createClass({
-  displayName: 'NavBar',
+import React from 'react';
+import DropdownToggle from "./DropdownToggle.js.jsx";
 
-  getInitialState: function () {
+class NavBar extends React.component {
+  displayName: "NavBar"
+
+  getInitialState() {
     return {
-      sitename: this.props.sitename || "Site has no name!",
-      root_path: this.props.root_path || "/",
-      links: this.props.links
-    }
-  },
+      links: this.props.links,
+      rootPath: this.props.root_path || "/",
+      sitename: this.props.sitename || "Site has no name!"
+    };
+  }
 
-  getLinks: function () {
+  getLinks() {
     if (this.state.links != null) {
       return (this.state.links.map(function (link) {
-        if (link.dropdown) {
-          return (<li key={link.title}><DropdownToggle title={link.title} dropdown={link.dropdown}/></li>)
-        } else if (link.url) {
-          return (<li key={link.title}><a href={link.url}>{link.title}</a></li>)
-        }
-      }));
-    } else { return (<div></div>); }
-  },
+        return (link.dropdown) ?
+          (<li key={link.title}><DropdownToggle title={link.title}
+          dropdown={link.dropdown}/></li>) :
+          (<li key={link.title}><a href={link.url}>{link.title}</a></li>);
+        }));
+    } else { 
+      return (<div/>); 
+    }
+  }
 
-  render: function () {
+  render() {
     return (
       <nav className="navbar navbar-default navbar-static-top navbar-inverse" id='navbar'>
         <div className="container">
           <div className="navbar-header">
-            <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <button type="button" className="navbar-toggle collapsed" data-toggle="collapse"
+             data-target="#navbar" aria-expanded="false" aria-controls="navbar">
               <span className="sr-only">Toggle navigation</span>
               <span className="icon-bar"></span>
               <span className="icon-bar"></span>
@@ -43,4 +48,6 @@ var NavBar = React.createClass({
       </nav>
     );
   }
-});
+}
+
+export default NavBar;

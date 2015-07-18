@@ -1,6 +1,14 @@
 # Helper functions for the application
 module ApplicationHelper
 
+  def navbar_props
+    { 
+      "sitename": "Reddit",
+      "root_path": root_path,
+      "links": navbar_links
+    }
+  end
+
   def navbar_links
     @links = [
       { url: '/about', title: 'About' },

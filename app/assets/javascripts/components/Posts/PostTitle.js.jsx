@@ -1,7 +1,9 @@
-var PostTitle = React.createClass({
-  displayName: 'PostTitle',
+import React from "react";
 
-  render: function () {
+class PostTitle extends React.component {
+  displayName: 'PostTitle'
+
+  render() {
     return (
       <div>
         <h4 className='col-sm-1'>Post ID</h4>
@@ -11,4 +13,6 @@ var PostTitle = React.createClass({
       </div>
     );
   }
-});
+}
+
+export default PostTitle;
