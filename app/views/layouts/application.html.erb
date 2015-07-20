@@ -3,25 +3,23 @@
 <head>
   <title>Reddit</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <%= favicon_link_tag %>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
+  <script src='assets/bundle.js'></script>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<script>
-  React.render(
-    React.createElement(NavBar, navbar_props),
-    document.getElementById("navbar");
-  );
-</script>
-
-<div class='navbar' />
-
-<div class='container'>
-  <%= yield %>
-</div>
-
+  <div id="NavBar"></div>
+  <script>
+    React.render(
+      React.createElement(NavBar, {
+        links: <%= navbar_links.html_safe %>,
+        rootPath: <%= "\"#{root_path}\"".html_safe %>,
+        sitename: "Read It!" 
+      }),
+      document.getElementById("NavBar")
+    );
+  </script>
+  <div class='container'>
+    <%= yield %>
+  </div>
 </body>
 </html>

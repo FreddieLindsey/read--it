@@ -1,13 +1,12 @@
 var path = require("path");
-var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
   context: __dirname,
   entry: {
-      app: "./app/assets/javascripts/application.js"
+      app: "./app/assets/javascripts/app.js"
   },
   output: {
-      path: path.join(__dirname, "app", "assets", "javascripts"),
+      path: path.join(__dirname, "public/assets"),
       filename: "bundle.js"
   },
   resolve: {
@@ -35,9 +34,9 @@ module.exports = {
     ]
   },
   eslint: {
-    emitWarning: false,
-    emitError: false,
-    failOnWarning: false,
+    emitWarning: true,
+    emitError: true,
+    failOnWarning: true,
     failOnError: true
   }
 };

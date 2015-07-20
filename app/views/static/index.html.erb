@@ -1,11 +1,1 @@
-<%= react_component('PostTitle', {}) %>
 
-<% @posts.each do |post| %>
-  <%= react_component('PostListing', {
-      id: post.id,
-      url: root_path + 'r/' + post.sub_reddit.title + '/posts/' + post.id.to_s,
-      title: post.title,
-      content: post.content,
-      username: post.user.username
-    }) %>
-<% end %>

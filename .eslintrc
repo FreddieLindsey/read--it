@@ -11,7 +11,7 @@
     "modules": true
   },
   "rules": {
-    "strict": 0
+    "strict": 1
   },
   "parser": "babel-eslint",
   "plugins": [

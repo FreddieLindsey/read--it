@@ -1,14 +1,18 @@
-import React from 'react';
+import React from "react";
 
-class DropdownToggle extends React.component {
-  displayName: 'DropdownToggle'
+const displayName = "DropdownToggle";
+const propTypes = {};
+
+export default class DropdownToggle extends React.Component {
 
   getLinks() {
     if (this.props.dropdown != null) {
       return (this.props.dropdown.map(function (link) {
-        return (link.divider) ?
-          (<li key={link.divider} role="separator" className="divider"></li>) :
-          (<li key={link.title}><a href={link.url}>{link.title}</a></li>);
+        if (link.divider) {
+          return (<li key={link.divider} role="separator" className="divider"></li>);
+        } else {
+          return (<li key={link.title}><a href={link.url}>{link.title}</a></li>);
+        }
       }));
     } else {
       return (<div key={null}></div>);
@@ -30,6 +34,7 @@ class DropdownToggle extends React.component {
     );
   }
 
-};
+}
 
-export default DropdownToggle;
+DropdownToggle.displayName = displayName;
+DropdownToggle.propTypes = propTypes;

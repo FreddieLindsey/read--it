@@ -29,5 +29,3 @@ gem 'rspec-rails', '~> 3.0'
 gem 'devise'
 # Use rails_12factor for Heroku integration
 gem 'rails_12factor', group: :production
-# Use webpack for asset pipeline
-gem 'webpack-rails'

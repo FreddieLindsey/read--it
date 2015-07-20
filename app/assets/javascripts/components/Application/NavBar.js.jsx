@@ -1,27 +1,22 @@
-import React from 'react';
+import React from "react";
 import DropdownToggle from "./DropdownToggle.js.jsx";
 
-class NavBar extends React.component {
-  displayName: "NavBar"
+const displayName = "NavBar";
+const propTypes = {};
 
-  getInitialState() {
-    return {
-      links: this.props.links,
-      rootPath: this.props.root_path || "/",
-      sitename: this.props.sitename || "Site has no name!"
-    };
-  }
+export default class NavBar extends React.Component {
 
   getLinks() {
-    if (this.state.links != null) {
-      return (this.state.links.map(function (link) {
-        return (link.dropdown) ?
-          (<li key={link.title}><DropdownToggle title={link.title}
-          dropdown={link.dropdown}/></li>) :
-          (<li key={link.title}><a href={link.url}>{link.title}</a></li>);
+    if (this.props.links != null) {
+      return (this.props.links.map(function (link) {
+        if (link.dropdown) {
+          return (<li key={link.title}><DropdownToggle title={link.title} dropdown={link.dropdown}/></li>);
+        } else {
+          return (<li key={link.title}><a href={link.url}>{link.title}</a></li>);
+        }
         }));
-    } else { 
-      return (<div/>); 
+    } else {
+      return (<div></div>);
     }
   }
 
@@ -37,7 +32,7 @@ class NavBar extends React.component {
               <span className="icon-bar"></span>
               <span className="icon-bar"></span>
             </button>
-            <a className="navbar-brand" href={this.state.root_path}>{this.state.sitename}</a>
+            <a className="navbar-brand" href={this.props.root_path}>{this.props.sitename}</a>
           </div>
           <div id="navbar" className="collapse navbar-collapse">
             <ul className="nav navbar-nav navbar-right">
@@ -50,4 +45,5 @@ class NavBar extends React.component {
   }
 }
 
-export default NavBar;
+NavBar.displayName = displayName;
+NavBar.propTypes = propTypes;

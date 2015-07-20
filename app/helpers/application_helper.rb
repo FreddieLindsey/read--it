@@ -1,13 +1,7 @@
 # Helper functions for the application
 module ApplicationHelper
 
-  def navbar_props
-    { 
-      "sitename": "Reddit",
-      "root_path": root_path,
-      "links": navbar_links
-    }
-  end
+  require 'json'
 
   def navbar_links
     @links = [
@@ -34,6 +28,17 @@ module ApplicationHelper
         ]
       }
     end
+    return @links.to_json
+  end
+
+  def react_component(name, props)
+    return
+        "<script>
+          React.render(
+            React.createElement(#{name}, #{JSON.pretty_generate(props)}),
+            document.getElementById(\'#{name}\')
+          );
+        </script>"
   end
 
   private
