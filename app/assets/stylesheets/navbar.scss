@@ -1,0 +1,19 @@
+@import 'application';
+
+#navbar {
+  background: $second-colour;
+}
+
+ul .dropdown-menu,
+li .dropdown {
+  background: $second-colour;
+
+  li a {
+    color: $main-text;
+  }
+
+  li a:hover {
+    background: $second-colour;
+    color: $main-text;
+  }
+}

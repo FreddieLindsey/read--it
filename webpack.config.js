@@ -11,7 +11,7 @@ module.exports = {
       filename: "bundle.js"
   },
   resolve: {
-  extensions: ["", ".js", ".jsx"]
+    extensions: ["", ".js", ".jsx"]
   },
   module: {
     preLoaders: [
@@ -49,6 +49,6 @@ module.exports = {
     failOnError: true
   },
   plugins: [
-      new ExtractTextPlugin("style.css", { allChunks: true })
+    new ExtractTextPlugin("style.css", { allChunks: true })
   ]
 };
