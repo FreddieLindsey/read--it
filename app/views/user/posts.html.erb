@@ -1,11 +1,17 @@
-<%= react_component('PostTitle', {}) %>
+<div id="PostTitle"></div>
+<script>
+  React.render(
+      React.createElement(PostTitle, {}),
+      document.getElementById("PostTitle")
+    );
+</script>
 
-<% @posts.each do |post| %>
-  <%= react_component('PostListing', {
-      id: post.id,
-      url: root_path + 'r/' + post.sub_reddit.title + '/posts/' + post.id.to_s,
-      title: post.title,
-      content: post.content,
-      username: post.user.username
-    }) %>
-<% end %>
+<div id="PostList"></div>
+<script>
+  React.render(
+      React.createElement(PostList, {
+        posts: <%= @posts.html_safe %>
+      }),
+      document.getElementById("PostList")
+    );
+</script>

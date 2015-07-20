@@ -1,0 +1,31 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+
+$light-level: 80;
+$dark-level: 34;
+$main-colour: rgb($light-level, $light-level, $light-level);
+$main-text: rgb(200, 200, 200);
+$second-colour: rgb($dark-level, $dark-level, $dark-level);
+
+html, 
+body {
+  background: $main-colour;
+  color: $main-text;
+  font-family: 'Roboto', sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.post-listing-title {
+
+  a, 
+  a:hover, 
+  a:visited, 
+  a:link, 
+  a:active {
+    color: $main-text;
+    text-decoration: underline;
+  }
+}
+
+

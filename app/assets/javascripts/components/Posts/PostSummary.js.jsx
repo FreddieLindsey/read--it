@@ -1,37 +1,21 @@
-var PostSummary = React.createClass({
-  displayName: 'PostSummary',
+import React from "react";
 
-  getInitialState: function () {
-    return {
-      id: this.props.id,
-      url: this.props.url,
-      title: this.props.title,
-      content: this.props.content,
-      username: this.props.username
-    }
-  },
+const displayName = "PostSummary";
+const propTypes = {};
 
-  render: function () {
-    var style_id_title = {
-      fontSize: '2em'
-    };
-
-    var style_content = {
-      fontSize: '1em'
-    };
-
+export default class PostSummary extends React.Component {
+  render() {
     return (
       <div>
-        <div className="col-sm-2" style={style_id_title}>{this.state.id}</div>
+        <div className="col-sm-2">{this.props.id}</div>
         <div className="col-sm-10">
-          <div className="col-sm-10" style={style_id_title}>
-            {this.state.title}
-          </div>
-          <div className="col-sm-10" style={style_content}>
-            {this.state.content}
-          </div>
+          <div className="col-sm-10">{this.props.title}</div>
+          <div className="col-sm-10">{this.props.content}</div>
         </div>
       </div>
     );
   }
-});
+}
+
+PostSummary.displayName = displayName;
+PostSummary.propTypes = propTypes;

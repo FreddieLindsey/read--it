@@ -1,9 +1,10 @@
 # Helper functions for the application
 module ApplicationHelper
 
+  require 'json'
+
   def navbar_links
     @links = [
-      { url: '/about', title: 'About' },
       { title: 'SubReddits', dropdown: subreddits }
     ]
     if user_signed_in?
@@ -26,6 +27,17 @@ module ApplicationHelper
         ]
       }
     end
+    return @links.to_json
+  end
+
+  def react_component(name, props)
+    return
+        "<script>
+          React.render(
+            React.createElement(#{name}, #{JSON.pretty_generate(props)}),
+            document.getElementById(\'#{name}\')
+          );
+        </script>"
   end
 
   private

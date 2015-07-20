@@ -18,3 +18,5 @@
 
 # Ignore node modules
 node_modules/
+public/assets
+app/assets/javascripts/bundle.js

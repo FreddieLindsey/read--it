@@ -1,38 +1,38 @@
-var NavBar = React.createClass({
-  displayName: 'NavBar',
+import React from "react";
+import DropdownToggle from "./DropdownToggle.js.jsx";
 
-  getInitialState: function () {
-    return {
-      sitename: this.props.sitename || "Site has no name!",
-      root_path: this.props.root_path || "/",
-      links: this.props.links
-    }
-  },
+const displayName = "NavBar";
+const propTypes = {};
 
-  getLinks: function () {
-    if (this.state.links != null) {
-      return (this.state.links.map(function (link) {
+export default class NavBar extends React.Component {
+
+  getLinks() {
+    if (this.props.links != null) {
+      return (this.props.links.map(function (link) {
         if (link.dropdown) {
-          return (<li key={link.title}><DropdownToggle title={link.title} dropdown={link.dropdown}/></li>)
-        } else if (link.url) {
-          return (<li key={link.title}><a href={link.url}>{link.title}</a></li>)
+          return (<li key={link.title}><DropdownToggle title={link.title} dropdown={link.dropdown}/></li>);
+        } else {
+          return (<li key={link.title}><a href={link.url}>{link.title}</a></li>);
         }
-      }));
-    } else { return (<div></div>); }
-  },
+        }));
+    } else {
+      return (<div></div>);
+    }
+  }
 
-  render: function () {
+  render() {
     return (
       <nav className="navbar navbar-default navbar-static-top navbar-inverse" id='navbar'>
         <div className="container">
           <div className="navbar-header">
-            <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <button type="button" className="navbar-toggle collapsed" data-toggle="collapse"
+             data-target="#navbar" aria-expanded="false" aria-controls="navbar">
               <span className="sr-only">Toggle navigation</span>
               <span className="icon-bar"></span>
               <span className="icon-bar"></span>
               <span className="icon-bar"></span>
             </button>
-            <a className="navbar-brand" href={this.state.root_path}>{this.state.sitename}</a>
+            <a className="navbar-brand" href={this.props.rootPath}>{this.props.sitename}</a>
           </div>
           <div id="navbar" className="collapse navbar-collapse">
             <ul className="nav navbar-nav navbar-right">
@@ -43,4 +43,7 @@ var NavBar = React.createClass({
       </nav>
     );
   }
-});
+}
+
+NavBar.displayName = displayName;
+NavBar.propTypes = propTypes;

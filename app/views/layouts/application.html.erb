@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Reddit</title>
+  <title>readdit</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <%= favicon_link_tag %>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <script src='/assets/bundle.js'></script>
+  <!-- Bootstrap -->
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <!-- Bootstrap -->
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= react_component('NavBar', {
-    sitename: "Reddit",
-    root_path: root_path,
-    links: navbar_links 
-  }) %>
-
-<div class='container'>
-  <%= yield %>
-</div>
-
+  <div id="NavBar"></div>
+  <script>
+    React.render(
+      React.createElement(NavBar, {
+        links: <%= navbar_links.html_safe %>,
+        rootPath: <%= "\"#{root_path}\"".html_safe %>,
+        sitename: "readdit" 
+      }),
+      document.getElementById("NavBar")
+    );
+  </script>
+  <div class='container'>
+    <%= yield %>
+  </div>
 </body>
 </html>
