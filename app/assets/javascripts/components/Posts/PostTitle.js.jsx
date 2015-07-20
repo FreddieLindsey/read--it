@@ -1,8 +1,9 @@
 import React from "react";
 
-class PostTitle extends React.component {
-  displayName: 'PostTitle'
+const displayName = "PostTitle";
+const propTypes = {};
 
+export default class PostTitle extends React.Component {
   render() {
     return (
       <div>
@@ -15,4 +16,5 @@ class PostTitle extends React.component {
   }
 }
 
-export default PostTitle;
+PostTitle.displayName = displayName;
+PostTitle.propTypes = propTypes;

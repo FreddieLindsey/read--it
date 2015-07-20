@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Reddit</title>
+  <title>readdit</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src='assets/bundle.js'></script>
+  <!-- Bootstrap -->
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <!-- Bootstrap -->
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -13,7 +19,7 @@
       React.createElement(NavBar, {
         links: <%= navbar_links.html_safe %>,
         rootPath: <%= "\"#{root_path}\"".html_safe %>,
-        sitename: "Read It!" 
+        sitename: "readdit" 
       }),
       document.getElementById("NavBar")
     );

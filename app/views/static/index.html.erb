@@ -1,1 +1,17 @@
+<div id="PostTitle"></div>
+<script>
+  React.render(
+      React.createElement(PostTitle, {}),
+      document.getElementById("PostTitle")
+    );
+</script>
 
+<div id="PostList"></div>
+<script>
+  React.render(
+      React.createElement(PostList, {
+        posts: <%= @posts.html_safe %>
+      }),
+      document.getElementById("PostList")
+    );
+</script>
