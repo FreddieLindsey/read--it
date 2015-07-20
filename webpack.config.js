@@ -1,4 +1,5 @@
 var path = require("path");
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
   context: __dirname,
@@ -28,6 +29,14 @@ module.exports = {
         loader: "babel"
       },
       {
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract("css-loader")
+      },
+      {
+        test: /\.scss$/,
+        loader: ExtractTextPlugin.extract("style-loader", "css-loader!sass-loader")
+      },
+      {
         test: require.resolve("react"),
         loader: "expose?React"
       }
@@ -38,5 +47,8 @@ module.exports = {
     emitError: true,
     failOnWarning: true,
     failOnError: true
-  }
+  },
+  plugins: [
+      new ExtractTextPlugin("style.css", { allChunks: true })
+  ]
 };
