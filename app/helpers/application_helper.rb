@@ -5,7 +5,6 @@ module ApplicationHelper
 
   def navbar_links
     @links = [
-      { url: '/about', title: 'About' },
       { title: 'SubReddits', dropdown: subreddits }
     ]
     if user_signed_in?

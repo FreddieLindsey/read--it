@@ -1,35 +1,21 @@
-var Comment = React.createClass({
-  displayName: 'Comment',
+import React from "react";
 
-  getInitialState: function () {
-    return {
-      content: this.props.content,
-      username: this.props.username,
-      created: this.props.created
-    }
-  },
+const displayName = "Comment";
+const propTypes = {};
 
-  render: function () {
-    var style_date_user = {
-      fontSize: '1.2em'
-    };
-
-    var style_content = {
-      fontSize: '0.9em'
-    };
-
+export default class Comment extends React.Component {
+  render() {
     return (
       <div>
-        <div className="col-sm-2" style={style_date_user}>{this.state.created}</div>
+        <div className="col-sm-2">{this.state.created}</div>
         <div className="col-sm-10">
-          <div className="col-sm-10" style={style_date_user}>
-            {this.state.username}
-          </div>
-          <div className="col-sm-10" style={style_content}>
-            {this.state.content}
-          </div>
+          <div className="col-sm-10">{this.state.username}</div>
+          <div className="col-sm-10">{this.state.content}</div>
         </div>
       </div>
     );
   }
-});
+}
+
+Comment.displayName = displayName;
+Comment.propTypes = propTypes;

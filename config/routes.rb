@@ -2,9 +2,6 @@ Rails.application.routes.draw do
   # Root as list of posts
   root 'static#index'
 
-  # Pages controller TODO: rename static to Pages
-  get '/about', to: 'static#about'
-
   # User controller
   devise_for :users, controllers: {
     confirmations: 'user/confirmations',

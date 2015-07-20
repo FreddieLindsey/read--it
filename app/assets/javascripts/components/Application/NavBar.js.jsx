@@ -32,7 +32,7 @@ export default class NavBar extends React.Component {
               <span className="icon-bar"></span>
               <span className="icon-bar"></span>
             </button>
-            <a className="navbar-brand" href={this.props.root_path}>{this.props.sitename}</a>
+            <a className="navbar-brand" href={this.props.rootPath}>{this.props.sitename}</a>
           </div>
           <div id="navbar" className="collapse navbar-collapse">
             <ul className="nav navbar-nav navbar-right">
