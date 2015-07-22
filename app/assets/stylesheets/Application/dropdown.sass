@@ -1,0 +1,51 @@
+@import "../variables";
+  
+.navbar {
+  ul {
+    font-size: 0;
+    list-style-type: none;
+    
+    li {
+      color: $navbar-text;
+      font-size: $navbar-font-size;
+      display: inline-block;
+      min-width: 100px;
+      padding: 15px;
+      position: relative;
+      text-align: center;
+      
+      ul {
+        display: none;
+      }
+      
+      &:hover, &:active {
+        cursor: pointer;
+        background-color: $brand;
+        border: 1px;
+        
+        ul {
+          display: block;
+          right: 0;
+          position: absolute;
+          width: 100%;
+          
+          li {
+            display: block;
+            background-color: $brand;
+            span {
+              float: right;
+              color: $navbar-text;
+              padding: 2px 5px;
+              font-size: .8rem;
+              border-radius: 3px;
+            }
+           
+            &:hover {
+              span {}
+            }
+          }
+        }
+      } 
+    }
+  }
+}

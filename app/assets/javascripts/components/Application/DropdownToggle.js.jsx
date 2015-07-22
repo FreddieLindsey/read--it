@@ -1,4 +1,5 @@
 import React from "react";
+require("../../../stylesheets/Application/dropdown.sass");
 
 const displayName = "DropdownToggle";
 const propTypes = {};
@@ -9,7 +10,7 @@ export default class DropdownToggle extends React.Component {
     if (this.props.dropdown != null) {
       return (this.props.dropdown.map(function (link) {
         if (link.divider) {
-          return (<li key={link.divider} role="separator" className="divider"></li>);
+          return (<hr></hr>);
         } else {
           return (<li key={link.title}><a href={link.url}>{link.title}</a></li>);
         }
@@ -21,13 +22,9 @@ export default class DropdownToggle extends React.Component {
 
   render() {
     return (
-      <li className='dropdown'>
-        <a href="#" className="dropdown-toggle"
-           data-toggle="dropdown" role="button"
-           aria-haspopup="true" aria-expanded="false">{this.props.title}
-          <span className="caret"></span>
-        </a>
-        <ul className="dropdown-menu">
+      <li>{this.props.title + " "}
+        <i className="fa fa-angle-down"></i>
+        <ul>
           {this.getLinks()}
         </ul>
       </li>

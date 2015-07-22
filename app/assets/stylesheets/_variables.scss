@@ -1,0 +1,20 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+
+// Brand variables
+$brand: #a0c0c0;
+$brand-light: lighten($brand, 10%);
+$brand-dark: darken($brand, 10%);
+$text-colour: #202020;
+
+// Device variables
+$mobile-width: 320px;
+$desktop: 321px;
+
+// Application variables
+$page-background: #eee;
+$page-width: 90%;
+$page-text: $text-colour;
+
+// NavBar variables
+$navbar-text: $text-colour;
+$navbar-font-size: 1rem;
