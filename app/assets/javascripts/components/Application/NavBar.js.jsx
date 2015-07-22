@@ -1,5 +1,6 @@
 import React from "react";
 import DropdownToggle from "./DropdownToggle.js.jsx";
+require("../../../stylesheets/navbar.scss");
 
 const displayName = "NavBar";
 const propTypes = {};
