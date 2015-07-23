@@ -1,0 +1,9 @@
+@import '../variables';
+
+.post-summary {
+  margin: 20px 0;
+
+  &:first-child {
+    margin: 0 0 20px;
+  }
+}

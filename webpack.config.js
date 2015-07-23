@@ -37,6 +37,10 @@ module.exports = {
         loader: ExtractTextPlugin.extract("style-loader", "css-loader!sass-loader")
       },
       {
+        test: /\.sass$/,
+        loader: ExtractTextPlugin.extract("style-loader", "css-loader!sass-loader")
+      },
+      {
         test: require.resolve("react"),
         loader: "expose?React"
       }

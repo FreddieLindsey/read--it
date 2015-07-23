@@ -1,0 +1,45 @@
+@import "../variables";
+  
+.navbar ul li {
+  ul {
+    display: none;
+  }
+  
+  &:hover, &:active {
+    background-color: $navbar-dropdown-background-title;
+    border: 1px;
+    
+    ul {
+      display: block;
+      margin-top: 12px;
+      position: absolute;
+      right: 0;
+      width: 100%;
+      
+      li {
+        background-color: $navbar-dropdown-background-item;
+        display: block;
+        margin: 0;
+        span {
+          color: $navbar-text;
+          float: right;
+          padding: 2px 5px;
+          font-size: .8rem;
+          border-radius: 3px;
+        }
+
+        a {
+          color: $navbar-text;
+          text-decoration: none;
+        }
+       
+        &:hover {
+          background: $navbar-dropdown-background-item-selected;
+          span {
+            background: $navbar-dropdown-background-item-selected;
+          }
+        }
+      }
+    }
+  }
+}
