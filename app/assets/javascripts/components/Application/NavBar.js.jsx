@@ -11,7 +11,7 @@ export default class NavBar extends React.Component {
     if (this.props.links != null) {
       return (this.props.links.map(function (link) {
         if (link.dropdown) {
-          return (<DropdownToggle title={link.title} dropdown={link.dropdown} />);
+          return (<DropdownToggle key={link.title} title={link.title} dropdown={link.dropdown} />);
         } else {
           return (<li key={link.title}><a href={link.url}>{link.title}</a></li>);
         }
@@ -23,12 +23,10 @@ export default class NavBar extends React.Component {
 
   render() {
     return (
-      <div className="container">
-        <div className="navbar">
-          <ul>
-            {this.getLinks()}
-          </ul>
-        </div>
+      <div className="navbar">
+        <ul>
+          {this.getLinks()}
+        </ul>
       </div>
     );
   }

@@ -16,7 +16,7 @@ export default class DropdownToggle extends React.Component {
         }
       }));
     } else {
-      return (<div key={null}></div>);
+      return (<div key={this.props.title}></div>);
     }
   }
 

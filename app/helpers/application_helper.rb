@@ -44,10 +44,14 @@ module ApplicationHelper
 
   def subreddits
     formatted_subreddits = []
+    top = [
+      { title: "Create new", url: "/subreddit/new" },
+      { divider: true }
+    ]
     SubReddit.all.order(title: :asc).select('title').each do |subreddit|
       formatted_subreddits << { title: subreddit.title, url: root_path + 'r/' + subreddit.title }
     end
-    formatted_subreddits
+    top + formatted_subreddits
   end
 
 end

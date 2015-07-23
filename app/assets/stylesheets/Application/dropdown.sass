@@ -9,7 +9,7 @@
       color: $navbar-text;
       font-size: $navbar-font-size;
       display: inline-block;
-      min-width: 100px;
+      min-width: 150px;
       padding: 15px;
       position: relative;
       text-align: center;
@@ -20,16 +20,18 @@
       
       &:hover, &:active {
         cursor: pointer;
-        background-color: $brand;
+        background-color: $navbar-dropdown-background;
         border: 1px;
         
         ul {
           display: block;
+          margin-top: 15px;
           right: 0;
           position: absolute;
           width: 100%;
           
           li {
+            margin: 0px;
             display: block;
             background-color: $brand;
             span {
@@ -38,6 +40,11 @@
               padding: 2px 5px;
               font-size: .8rem;
               border-radius: 3px;
+            }
+
+            a {
+              color: $navbar-text;
+              text-decoration: none;
             }
            
             &:hover {
