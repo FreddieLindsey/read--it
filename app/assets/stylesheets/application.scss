@@ -12,10 +12,9 @@ html,
 body {
   background: $page-background;
   color: $page-text;
-  font-family: 'Roboto', sans-serif;
+  font-family: $font;
 }
 
 .content {
-  margin: 0 auto;
-  width: $page-width;
+  margin-top: 50px;
 }

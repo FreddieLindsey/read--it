@@ -1,14 +1,58 @@
 @import "../variables";
 
-.navbar {
+#nav-bar {
   background-color: $navbar-background;
-  margin: 20px auto;
-  text-align: right;
-  width: $page-width;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
 
-  a, a:hover, a:active, a:visited {
-    color: $navbar-text;
-    text-decoration: none;  
+  .navbar {
+    display: table;
+    width: 90%;
+    margin: auto;
+    height: 50px;
+
+    &:before, &:after {
+      display: table;
+    }    
+
+    a, a:hover, a:active, a:visited {
+      color: $navbar-text;
+      text-decoration: none;  
+    }
+
+    ul {
+      font-size: 0;
+      list-style-type: none;
+    
+      li {
+        color: $navbar-text;
+        font-size: $navbar-font-size;
+        display: inline-block;
+        min-width: 150px;
+        padding: 15px;
+        position: relative;
+        text-align: center;
+        height: 50px;
+      }
+    }
+
+    @media screen and (max-width: $tablet - 1) {
+      .navbar-right ul {
+        display: none;
+      }
+    }
+    
+    @media screen and (min-width: $tablet) {
+      .navbar-left {
+        float: left;
+      }
+
+      .navbar-right {
+        float: right;
+      }
+
+    }
   }
-
 }

@@ -1,22 +1,29 @@
-@import url(http://fonts.googleapis.com/css?family=Roboto);
+@import url(http://fonts.googleapis.com/css?family=Fira+Sans);
 
 // Brand variables
 $brand: #eee;
 $brand-light: lighten($brand, 10%);
 $brand-dark: darken($brand, 10%);
 $text-colour: #202020;
+$font: 'Fira Sans', sans-serif;
 
 // Device variables
-$mobile-width: 320px;
-$desktop: 321px;
+$mobile: 320px;
+$tablet: 768px;
+$desktop: 1024px;
+$desktop-hd: 1440px;
 
 // Application variables
 $page-background: $brand-dark;
-$page-width: 90%;
 $page-text: $text-colour;
 
 // NavBar variables
 $navbar-text: $text-colour;
 $navbar-font-size: 1rem;
 $navbar-background: $brand-light;
-$navbar-dropdown-background: $brand;
+$navbar-dropdown-background-title: $brand;
+$navbar-dropdown-background-item: $brand-light;
+$navbar-dropdown-background-item-selected: $brand-dark;
+
+// Content variables
+$content-border-colour: $brand;

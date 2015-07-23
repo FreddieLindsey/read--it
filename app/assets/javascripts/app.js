@@ -1,7 +1,10 @@
 // Webpack installed rather than sprockets
 
-// Required for all pages
+// Style for all pages
 require("../stylesheets/application.scss");
+require("../stylesheets/grid.sass");
+
+// Required for all pages
 require("expose?NavBar!./components/Application/NavBar.js.jsx");
 
 // Required for any post listings

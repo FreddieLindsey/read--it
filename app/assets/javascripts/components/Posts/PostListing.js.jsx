@@ -6,11 +6,11 @@ const propTypes = {};
 export default class PostListing extends React.Component {
   render() {
     return (
-      <div>
-        <div className='col-sm-1 post-listing-id'>{this.props.id}</div>
-        <div className='col-sm-2 post-listing-title'><a href={this.props.url}>{this.props.title}</a></div>
-        <div className='col-sm-7 post-listing-content'>{this.props.content}</div>
-        <div className='col-sm-2 post-listing-username'>By {this.props.username}</div>
+      <div className="row">
+        <div className="col-xs-3">{this.props.id}</div>
+        <div className="col-xs-9"><a href={this.props.url}>{this.props.title}</a></div>
+        <div className="col-xs-12">{this.props.content}</div>
+        <div className="col-xs-12"><p>Posted By</p>{this.props.username}</div>
       </div>
     );
   }

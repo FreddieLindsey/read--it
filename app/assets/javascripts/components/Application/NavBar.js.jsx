@@ -15,7 +15,7 @@ export default class NavBar extends React.Component {
         } else {
           return (<li key={link.title}><a href={link.url}>{link.title}</a></li>);
         }
-        }));
+      }));
     } else {
       return (<div></div>);
     }
@@ -24,9 +24,17 @@ export default class NavBar extends React.Component {
   render() {
     return (
       <div className="navbar">
-        <ul>
-          {this.getLinks()}
-        </ul>
+        <div className="navbar-left">
+          <ul>
+            <li><a className="navbar-brand" href={this.props.rootPath}>
+              {this.props.sitename}</a></li>
+          </ul>
+        </div>
+        <div className="navbar-right">
+          <ul>
+            {this.getLinks()}
+          </ul>
+        </div>
       </div>
     );
   }
