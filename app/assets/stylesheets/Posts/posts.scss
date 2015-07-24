@@ -2,8 +2,18 @@
 
 .post-summary {
   margin: 20px 0;
+  border: 1px solid #a0a0a0;
+  border-radius: 4px;
 
   &:first-child {
     margin: 0 0 20px;
   }
+}
+
+.post-summary-by {
+  border-top: 1px solid #c0c0c0;
+}
+
+.post-summary-information {
+  border-left: 1px solid #a0a0a0;
 }

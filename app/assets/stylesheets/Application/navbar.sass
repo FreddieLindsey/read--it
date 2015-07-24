@@ -1,25 +1,42 @@
-@import "../variables";
+@import '../variables';
 
 #nav-bar {
   background-color: $navbar-background;
-  position: fixed;
   left: 0;
+  position: fixed;
   right: 0;
   top: 0;
+  box-shadow: 0 1px 5px #888;
 
   .navbar {
     display: table;
-    width: 90%;
-    margin: auto;
     height: 50px;
+    margin: auto;
+    width: $page-width;
 
     &:before, &:after {
       display: table;
-    }    
+    }
 
-    a, a:hover, a:active, a:visited {
+    .navbar-brand {
+      font-size: 21px;
+      padding: 10px 0;
+    }
+
+    .mobile-menu {
+      font-size: 29px;
+      padding: 4px 0;
+    }
+
+    a, 
+    a:visited {
       color: $navbar-text;
       text-decoration: none;  
+    }
+
+    a:hover, 
+    a:active {
+      color: $navbar-link-hover;
     }
 
     ul {
@@ -28,31 +45,38 @@
     
       li {
         color: $navbar-text;
-        font-size: $navbar-font-size;
         display: inline-block;
+        font-size: $navbar-font-size;
+        height: 50px;
         min-width: 150px;
         padding: 15px;
         position: relative;
         text-align: center;
-        height: 50px;
       }
     }
 
+    .navbar-left {
+      float: left;
+    }
+
+    .mobile-menu {
+      float: right;
+    }
+
     @media screen and (max-width: $tablet - 1) {
-      .navbar-right ul {
+      .navbar-right {
         display: none;
       }
     }
     
     @media screen and (min-width: $tablet) {
-      .navbar-left {
-        float: left;
-      }
-
       .navbar-right {
         float: right;
       }
 
+      .mobile-menu {
+        display: none;
+      }
     }
   }
 }

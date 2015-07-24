@@ -25,15 +25,17 @@ export default class NavBar extends React.Component {
     return (
       <div className="navbar">
         <div className="navbar-left">
-          <ul>
-            <li><a className="navbar-brand" href={this.props.rootPath}>
-              {this.props.sitename}</a></li>
-          </ul>
+          <div className="navbar-brand">
+            <a href={this.props.rootPath}>{this.props.sitename}</a>
+          </div>
         </div>
         <div className="navbar-right">
           <ul>
             {this.getLinks()}
           </ul>
+        </div>
+        <div className="mobile-menu">
+          &#9776;
         </div>
       </div>
     );

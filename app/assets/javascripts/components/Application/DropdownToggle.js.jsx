@@ -10,7 +10,7 @@ export default class DropdownToggle extends React.Component {
     if (this.props.dropdown != null) {
       return (this.props.dropdown.map(function (link) {
         if (link.divider) {
-          return (<hr></hr>);
+          return (<hr key={link.divider}></hr>);
         } else {
           return (<li key={link.title}><a href={link.url}>{link.title}</a></li>);
         }
