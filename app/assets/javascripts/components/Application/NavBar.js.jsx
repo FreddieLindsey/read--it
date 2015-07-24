@@ -1,6 +1,7 @@
 import React from "react";
 import DropdownToggle from "./DropdownToggle.js.jsx";
 require("../../../stylesheets/Application/navbar.sass");
+require("../../../stylesheets/Application/hamburger.sass");
 
 const displayName = "NavBar";
 const propTypes = {};
@@ -35,7 +36,6 @@ export default class NavBar extends React.Component {
           </ul>
         </div>
         <div className="mobile-menu">
-          &#9776;
         </div>
       </div>
     );
