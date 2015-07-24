@@ -13,6 +13,7 @@
     height: 50px;
     margin: auto;
     width: $page-width;
+    max-width: $desktop-max-width;
 
     &:before, &:after {
       display: table;
@@ -24,6 +25,7 @@
     }
 
     .mobile-menu {
+      float: right;
       font-size: 29px;
       padding: 4px 0;
     }
@@ -44,6 +46,7 @@
       list-style-type: none;
     
       li {
+        border-left: 1px solid #d0d0d0;
         color: $navbar-text;
         display: inline-block;
         font-size: $navbar-font-size;
@@ -53,17 +56,17 @@
         position: relative;
         text-align: center;
       }
+
+      &:last-child {
+        border-right: 1px solid #d0d0d0;
+      }
     }
 
     .navbar-left {
       float: left;
     }
 
-    .mobile-menu {
-      float: right;
-    }
-
-    @media screen and (max-width: $tablet - 1) {
+    @media screen and (max-width: $tablet) {
       .navbar-right {
         display: none;
       }
